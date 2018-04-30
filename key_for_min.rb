@@ -3,9 +3,11 @@
 
 def key_for_min_value(name_hash)
   min_key = ""
-  name_hash.each do |key, value|
-    if value < name_hash[key]
-      min_key = key
-    end
+  new_value = name_hash.each { |value| puts value }     
+    name_hash.each do |key, value|
+      until value < new_value
+        key
+      end
+    end    
   end
 end
